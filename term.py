@@ -1,18 +1,6 @@
 import time
-from threading import Thread, local
-
-
-#
-# def main():
-#     msg = input(" ")
-#     results = requests.get(f'http://127.0.0.1:8000/{msg}')
-#     jresults = results.json()
-#     print(jresults['message'])
-#     main()
-#
-#
-# main()
-import requests
+from threading import Thread
+from security import safe_requests
 
 
 class Spammer(Thread):
@@ -23,7 +11,7 @@ class Spammer(Thread):
     def run(self):
         while True:
             try:
-                response = requests.get(self.url)
+                response = safe_requests.get(self.url)
                 print(f"Sent GET request to {self.url} ({response.text})")
             except:
                 time.sleep(0.1)
