@@ -617,7 +617,7 @@ trainer.train(
         "I do not, no.",
         "Do you feel emotions",
         "Do you feel emotions?",
-        "Yes with alot of training I can"
+        "Yes with alot of training I can",
         "I can be programmed to act and react as if I feel emotions.  Does that count?",
         "Do you feel pain",
         "Sometimes.",
